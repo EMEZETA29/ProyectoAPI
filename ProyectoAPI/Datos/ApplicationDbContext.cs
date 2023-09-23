@@ -11,6 +11,7 @@ namespace ProyectoAPI.Datos
 
         }
         public DbSet<Vehiculo> Vehiculo { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
@@ -32,6 +33,7 @@ namespace ProyectoAPI.Controllers
                 
         
         [HttpGet]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<APIResponse>> GetVehiculos()
         {
@@ -58,6 +60,7 @@ namespace ProyectoAPI.Controllers
         }
 
         [HttpGet("id", Name = "GetVehiculo")]
+        [Authorize]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -102,6 +105,7 @@ namespace ProyectoAPI.Controllers
 
 
         [HttpPost]
+        [Authorize(Roles ="Admin")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status500InternalServerError)]
@@ -151,10 +155,11 @@ namespace ProyectoAPI.Controllers
         }
 
         [HttpDelete("id")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteVehiculo(int id)
         {
             try
             {
@@ -172,7 +177,7 @@ namespace ProyectoAPI.Controllers
                     _response.statusCode = HttpStatusCode.NotFound;
                     return NotFound(_response);
                 }
-                _vehiculoRepo.Remover(vehiculo);
+                await _vehiculoRepo.Remover(vehiculo);
                 _response.statusCode = HttpStatusCode.NoContent;
 
                 return Ok(_response);
@@ -188,6 +193,7 @@ namespace ProyectoAPI.Controllers
         }
 
         [HttpPut("id")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdateVehiculo(int id, [FromBody] VehiculoUpdateDto updateDto)
@@ -210,6 +216,7 @@ namespace ProyectoAPI.Controllers
         }
 
         [HttpPatch("id")]
+        [Authorize(Roles = "Admin")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> UpdatePartialVehiculo(int id, JsonPatchDocument<VehiculoUpdateDto> patchDto)

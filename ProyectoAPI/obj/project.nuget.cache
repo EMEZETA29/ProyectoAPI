@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zYgBx26z+wl6neNs5uecnMmFDOMbL8ZaSbZ/0JXXGRZIQI21Ts2xKn7LLeF3iHpmVhXFho0X80elJtItIPiBXQ==",
+  "dgSpecHash": "DpO0BLf5Y0gVi0iSZndMp7faPEHn8KbVM8Cy+BGheKMeVoAbBZbu4VpWIkEyEB337NeMK52GzM4ZPTttMLiUDg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Roberto\\Desktop\\Proyecto\\Proyecto\\ProyectoAPI\\ProyectoAPI.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Roberto\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Roberto\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\Roberto\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\Roberto\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
     "C:\\Users\\Roberto\\.nuget\\packages\\microsoft.aspnetcore.jsonpatch\\6.0.0\\microsoft.aspnetcore.jsonpatch.6.0.0.nupkg.sha512",
     "C:\\Users\\Roberto\\.nuget\\packages\\microsoft.aspnetcore.mvc.newtonsoftjson\\6.0.0\\microsoft.aspnetcore.mvc.newtonsoftjson.6.0.0.nupkg.sha512",
     "C:\\Users\\Roberto\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",

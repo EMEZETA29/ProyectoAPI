@@ -91,3 +91,4 @@ C:\Users\Roberto\Desktop\Proyecto\Proyecto\ProyectoAPI\bin\Debug\net6.0\Microsof
 C:\Users\Roberto\Desktop\Proyecto\Proyecto\ProyectoAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\Roberto\Desktop\Proyecto\Proyecto\ProyectoAPI\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\Roberto\Desktop\Proyecto\Proyecto\ProyectoAPI\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Roberto\Desktop\Proyecto\Proyecto\ProyectoAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
